@@ -9,17 +9,17 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background: #f9f9f9;
             color: #333;
         }
         header {
-            background: #333;
-            color: #fff;
+            background: #555;
             padding: 1rem 0;
             text-align: center;
         }
         header h1 {
             margin: 0;
+            color: #fff;
         }
         nav {
             margin: 1rem 0;
@@ -37,12 +37,15 @@
             padding: 2rem;
             max-width: 900px;
             margin: auto;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
         .section {
             margin-bottom: 2rem;
         }
         .section h2 {
-            border-bottom: 2px solid #333;
+            border-bottom: 2px solid #555;
             padding-bottom: 0.5rem;
         }
         .projects {
@@ -51,12 +54,13 @@
             gap: 1rem;
         }
         .project-card {
-            background: #fff;
+            background: #f9f9f9;
             border: 1px solid #ddd;
             border-radius: 8px;
             padding: 1rem;
             width: calc(50% - 1rem);
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            color: #333;
         }
         .project-card h3 {
             margin: 0;
@@ -64,12 +68,21 @@
         footer {
             text-align: center;
             padding: 1rem 0;
-            background: #333;
+            background: #555;
             color: #fff;
             margin-top: 2rem;
         }
         footer p {
             margin: 0;
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid #555;
         }
     </style>
 </head>
@@ -80,6 +93,7 @@
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
+            <a href="#certifications">Certifications</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
@@ -87,18 +101,19 @@
     <div class="container">
         <section id="about" class="section">
             <h2>About Me</h2>
-            <p>Hello! I have 9 years of extensive experience in IT, focusing on DevOps, cloud services, automation, and system administration. Over the years, I’ve honed my skills in tools like Terraform, Jenkins, Docker, Kubernetes, and Ansible to drive automation, streamline CI/CD pipelines, and improve the scalability of applications. My expertise includes designing and deploying infrastructure across AWS, Azure, and OpenShift platforms, ensuring high availability, fault tolerance, and compliance with industry standards.
-I have a proven track record of automating tasks using Python, Bash, and PowerShell, such as system health checks, log analysis, and configuration management. I’ve worked on container orchestration with Amazon EKS, ECS, and OpenShift, enabling seamless deployments and efficient scaling for production environments. Additionally, I’ve implemented monitoring and alerting solutions using Splunk, Dynatrace, and CloudWatch, creating real-time dashboards to track performance and identify issues proactively.
-Some of my key accomplishments include automating infrastructure with Terraform, reducing manual effort and deployment times significantly; optimizing CI/CD pipelines with Jenkins and GitHub, which improved release cycles from weeks to days; and collaborating with compliance teams to embed security checks into development workflows. I’ve also led initiatives to migrate on-premises systems to the cloud, leveraging tools like AWS Site Recovery and ARM templates to ensure smooth transitions. </p>
+            <img src="portfolio/profile-picture.jpg" alt="Nanda Gopal" class="profile-pic">
+            <p>Hello! I am Nanda Gopal, a passionate Cloud Automation Engineer with 9 years of experience in DevOps, cloud services, and automated infrastructure management. I specialize in optimizing workflows, building CI/CD pipelines, and ensuring high availability for systems. My mission is to deliver efficient, scalable, and reliable solutions.</p>
         </section>
 
         <section id="skills" class="section">
             <h2>Skills</h2>
             <ul>
-                <li>Automation Testing: Selenium, Playwright</li>
-                <li>Programming: Bash, Python</li>
-                <li>DevOps: Jenkins, AWS, Docker, Kubernetes, Terraform, Azure</li>
-                <li>Monitoring: Dynatrace, Splunk, CloudWatch</li>
+                <li>Cloud Platforms: AWS, Azure</li>
+                <li>Containerization: Docker, Kubernetes, Amazon EKS</li>
+                <li>Automation Tools: Terraform, Ansible, Chef</li>
+                <li>Programming Languages: Python, Java, PowerShell</li>
+                <li>CI/CD: Jenkins, GitHub, GitLab</li>
+                <li>Monitoring: Datadog, Dynatrace, CloudWatch</li>
             </ul>
         </section>
 
@@ -106,24 +121,43 @@ Some of my key accomplishments include automating infrastructure with Terraform,
             <h2>Projects</h2>
             <div class="projects">
                 <div class="project-card">
-                    <h3>CI/CD Pipeline for Automation</h3>
-                    <p>Developed an end-to-end CI/CD pipeline integrating Selenium tests to ensure seamless deployments.</p>
+                    <h3>Elastic Stack Implementation</h3>
+                    <p>Designed and deployed scalable Elastic Stack solutions using Docker and Kubernetes to monitor system performance and provide real-time insights.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Metrics Dashboard</h3>
-                    <p>Created a comprehensive monitoring solution using Splunk and CloudWatch to visualize system health.</p>
+                    <h3>Infrastructure Automation</h3>
+                    <p>Automated infrastructure provisioning with Terraform and Ansible, reducing deployment times and eliminating configuration errors.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Cloud Migration</h3>
+                    <p>Led on-premises to Azure migration projects, optimizing resources for performance and cost efficiency using ARM templates and Azure Site Recovery.</p>
+                </div>
+                <div class="project-card">
+                    <h3>CI/CD Pipeline Optimization</h3>
+                    <p>Built and optimized CI/CD pipelines for seamless code releases, cutting release cycles from weeks to days and enhancing delivery efficiency.</p>
                 </div>
             </div>
         </section>
 
+        <section id="certifications" class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>Certified AWS Solutions Architect – Associate</li>
+                <li>Certified AWS Developer – Associate</li>
+                <li>HashiCorp Certified: Terraform Associate (003)</li>
+            </ul>
+        </section>
+
         <section id="contact" class="section">
             <h2>Contact</h2>
-            <p>If you would like to get in touch, feel free to email me at <a href="mailto:example@example.com">nandagopal5594@gmail.com</a>.</p>
+            <p>If you’d like to work together or learn more about my projects, feel free to reach out!</p>
+            <p>Email: <a href="mailto:nandagopal594@gmail.com">nandagopal594@gmail.com</a></p>
+            <p>Phone: +1 (919) 589-2586</p>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+        <p>&copy; 2025 Nanda Gopal. All rights reserved.</p>
     </footer>
 </body>
 </html>
