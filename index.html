@@ -12,152 +12,86 @@
             background: #f9f9f9;
             color: #333;
         }
-        header {
-            background: #555;
-            padding: 1rem 0;
+        .window {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            flex-direction: column;
         }
-        header h1 {
-            margin: 0;
+        .about {
+            background: #e8f4fc;
+        }
+        .experience {
+            background: #fcefe8;
+        }
+        .contact {
+            background: #eafce8;
+        }
+        h1, h2 {
+            margin: 0.5rem 0;
+        }
+        p {
+            max-width: 600px;
+            margin: 1rem auto;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            background: #555;
             color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        .btn:hover {
+            background: #333;
         }
         nav {
-            margin: 1rem 0;
+            position: fixed;
+            top: 10px;
+            right: 10px;
         }
         nav a {
-            margin: 0 15px;
+            margin: 0 10px;
             text-decoration: none;
-            color: #fff;
+            color: #555;
             font-weight: bold;
         }
         nav a:hover {
             text-decoration: underline;
         }
-        .container {
-            padding: 2rem;
-            max-width: 900px;
-            margin: auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        .section h2 {
-            border-bottom: 2px solid #555;
-            padding-bottom: 0.5rem;
-        }
-        .projects {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-        .project-card {
-            background: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 1rem;
-            width: calc(50% - 1rem);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            color: #333;
-        }
-        .project-card h3 {
-            margin: 0;
-        }
-        footer {
-            text-align: center;
-            padding: 1rem 0;
-            background: #555;
-            color: #fff;
-            margin-top: 2rem;
-        }
-        footer p {
-            margin: 0;
-        }
-        .profile-pic {
-            display: block;
-            margin: 0 auto 2rem;
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border: 2px solid #555;
-        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#certifications">Certifications</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <div class="container">
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <img src="portfolio/profile-picture.jpg" alt="Nanda Gopal" class="profile-pic">
-            <p>Hello! I am Nanda Gopal, a passionate Cloud Automation Engineer with 9 years of experience in DevOps, cloud services, and automated infrastructure management. I specialize in optimizing workflows, building CI/CD pipelines, and ensuring high availability for systems. My mission is to deliver efficient, scalable, and reliable solutions.</p>
-        </section>
+    <section id="about" class="window about">
+        <h1>About Me</h1>
+        <img src="portfolio/profile-picture.jpg" alt="Nanda Gopal" style="border-radius: 50%; width: 150px; height: 150px; object-fit: cover;">
+        <p>Hello! I am Nanda Gopal, a passionate Cloud Automation Engineer with 9 years of experience in DevOps, cloud services, and automated infrastructure management. I specialize in optimizing workflows, building CI/CD pipelines, and ensuring high availability for systems.</p>
+    </section>
 
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <ul>
-                <li>Cloud Platforms: AWS, Azure</li>
-                <li>Containerization: Docker, Kubernetes, Amazon EKS</li>
-                <li>Automation Tools: Terraform, Ansible, Chef</li>
-                <li>Programming Languages: Python, Java, PowerShell</li>
-                <li>CI/CD: Jenkins, GitHub, GitLab</li>
-                <li>Monitoring: Datadog, Dynatrace, CloudWatch</li>
-            </ul>
-        </section>
+    <section id="experience" class="window experience">
+        <h1>My Experience</h1>
+        <h2>Cloud Automation Lead Engineer</h2>
+        <p>Automated infrastructure provisioning, managed containerized applications, and optimized CI/CD pipelines to ensure faster and error-free deployments.</p>
+        <h2>Senior DevOps Engineer</h2>
+        <p>Designed scalable cloud solutions, implemented advanced monitoring systems, and led the migration of on-premises applications to Azure Cloud.</p>
+        <h2>Other Roles</h2>
+        <p>Extensive experience as a Cloud BigData/DevOps Engineer and AWS Developer/SRE, with a strong focus on automation and system reliability.</p>
+    </section>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="projects">
-                <div class="project-card">
-                    <h3>Elastic Stack Implementation</h3>
-                    <p>Designed and deployed scalable Elastic Stack solutions using Docker and Kubernetes to monitor system performance and provide real-time insights.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Infrastructure Automation</h3>
-                    <p>Automated infrastructure provisioning with Terraform and Ansible, reducing deployment times and eliminating configuration errors.</p>
-                </div>
-                <div class="project-card">
-                    <h3>Cloud Migration</h3>
-                    <p>Led on-premises to Azure migration projects, optimizing resources for performance and cost efficiency using ARM templates and Azure Site Recovery.</p>
-                </div>
-                <div class="project-card">
-                    <h3>CI/CD Pipeline Optimization</h3>
-                    <p>Built and optimized CI/CD pipelines for seamless code releases, cutting release cycles from weeks to days and enhancing delivery efficiency.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="certifications" class="section">
-            <h2>Certifications</h2>
-            <ul>
-                <li>Certified AWS Solutions Architect – Associate</li>
-                <li>Certified AWS Developer – Associate</li>
-                <li>HashiCorp Certified: Terraform Associate (003)</li>
-            </ul>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact</h2>
-            <p>If you’d like to work together or learn more about my projects, feel free to reach out!</p>
-            <p>Email: <a href="mailto:nandagopal594@gmail.com">nandagopal594@gmail.com</a></p>
-            <p>Phone: +1 (919) 589-2586</p>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Nanda Gopal. All rights reserved.</p>
-    </footer>
+    <section id="contact" class="window contact">
+        <h1>Contact Me</h1>
+        <p>If you'd like to collaborate, have any questions, or just want to say hello, feel free to reach out!</p>
+        <p>Email: <a href="mailto:nandagopal594@gmail.com">nandagopal594@gmail.com</a></p>
+        <p>Phone: +1 (919) 589-2586</p>
+        <a href="https://calendly.com" class="btn" target="_blank">Schedule a Meeting</a>
+    </section>
 </body>
 </html>
